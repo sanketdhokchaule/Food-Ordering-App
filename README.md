@@ -1,4 +1,4 @@
-# Swiggy App Demo
+# Food Ordering App
 
 - This project is build using swiggy's live API
 - Build from scratch without using create-react-app  
