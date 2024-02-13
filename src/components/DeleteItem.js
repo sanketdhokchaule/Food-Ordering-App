@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
     }
     
     return(
-        <div className="m-2 p-2 flex justify-center">
+        <div className="m-1 p-1 flex justify-center">
             <button onClick={()=>handleDeleteItem(index)}>✖</button>
         </div>
     )

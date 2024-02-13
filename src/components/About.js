@@ -12,7 +12,7 @@ class About extends Component{
         return (
             <div className=" flex flex-col space-y-4 justify-center items-center">
                 <h1 className="font-bold text-xl">About Page</h1>
-                <h2>This is Food Court About page.</h2>
+                <h2>This is a About page.</h2>
                 <div>
                     loggedIn User : 
                     <UserContext.Consumer>

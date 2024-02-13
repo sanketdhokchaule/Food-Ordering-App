@@ -26,7 +26,7 @@ const RestaurantMenu = () => {
     )
 
     return (
-        <div className="menu justify-center text-center ">
+        <div className="menu justify-center text-center">
             <h1 className="text-xl font-bold">{name}</h1>
             <h3>{cuisines.join(", ")} - {costForTwoMessage}</h3>
             <h2 className="text-xl font-bold">Menu</h2>

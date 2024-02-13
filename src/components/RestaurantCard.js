@@ -12,7 +12,7 @@ const RestaurantCard = (props) =>{
     } = resData.info;
 
     return(
-        <div className="m-2 p-4 w-[230px] h-[400px] bg-slate-200 rounded-lg hover:bg-slate-100 hover:scale-95">
+        <div className="m-2 p-4 w-[230px] h-[400px] bg-slate-200 rounded-lg hover:bg-slate-100 hover:scale-95 duration-500">
             <img 
             className="w-full h-1/2 rounded-lg "
             alt="res-logo" 
@@ -31,7 +31,7 @@ export const withPromtedLabel = (RestaurantCard) =>{
     return(props)=>{
         return(
             <div className="relative">
-                <label className="absolute bg-green-600 text-white  p-2 top-0 left-2 rounded-tl-lg rounded-br-lg z-10">Veg</label>
+                <label className="absolute  bg-green-600 text-white  p-2 top-0 left-2 rounded-tl-lg rounded-br-lg z-10">Veg</label>
                 <RestaurantCard {...props}/>
             </div>
         )

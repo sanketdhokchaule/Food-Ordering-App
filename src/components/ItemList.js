@@ -9,9 +9,9 @@ const ItemList = ({items, btn, clear}) => {
            {items.map((item, index) => (
                 <div 
                     key={item.card.info.id}
-                    className=" flex p-2 m-2  border-gray-300 border-b-2 text-left"    
+                    className=" flex p-2 m-2 border-gray-300 border-b-2 text-left"    
                 >
-                    <div className="w-9/12 mr-3">
+                    <div className="sm:w-9/12 w-6/12 mr-3">
                         <div className="py-2 font-medium">
                             <span>{item.card.info.name}</span>
                             <span> ₹{item.card.info.price 
@@ -20,8 +20,8 @@ const ItemList = ({items, btn, clear}) => {
                         </div>
                         <p className="text-xs">{item.card.info.description}</p>
                     </div>
-                    <div className="relative flex justify-center  w-3/12">
-                        <img className="w-full"  src={MENU_ITEM_URL + item.card.info.imageId}/>
+                    <div className="relative flex justify-center sm:w-3/12 w-6/12">
+                        <img className="sm:w-full"  src={MENU_ITEM_URL + item.card.info.imageId}/>
                         {btn && <AddItem item={item}/>}
                     </div>
                     {clear && <DeleteItem index={index}/>}

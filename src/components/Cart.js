@@ -23,7 +23,7 @@ const Cart = () =>{
             </div>
             
             {cartItems.length===0 && <h1 className="my-40 m-auto p-10 font-bold">Cart is Empty ❗</h1>}
-            <div className="w-6/12 m-auto">
+            <div className="sm:w-1/2 w-11/12 m-auto">
                 <ItemList items={cartItems} btn={false} clear={true}/>
             </div>
         </div>

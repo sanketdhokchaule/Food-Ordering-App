@@ -12,7 +12,7 @@
     
     return(
         <div className="absolute bottom-0">
-            <button onClick={()=>handleAddItem(item)} className="p-1 bg-white font-semibold text-green-600 shadow-lg mb-0">Add + </button>
+            <button onClick={()=>handleAddItem(item)} className="p-1 bg-purple-600 sm:font-semibold font-medium text-xs text-white shadow-lg mb-0">Add + </button>
         </div>
     )
  }
