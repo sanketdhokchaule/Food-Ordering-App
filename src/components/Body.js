@@ -19,23 +19,17 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    try{
-        const data = await fetch(RES_URL, {
-          mode: "no-cors",
-          headers: {
-            "access-control-allow-origin" : "*"
-          }
-        });
-    const json = await data.json();
-    //optional chaining
-    const resData =
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
-    setRestList(resData);
-    setFilterRest(resData);
-    }
-    catch(error){
-        console.log(error.message)
+    try {
+      const data = await fetch(RES_URL);
+      const json = await data.json();
+      //optional chaining
+      const resData =
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
+      setRestList(resData);
+      setFilterRest(resData);
+    } catch (error) {
+      console.log(error.message);
     }
   };
 
@@ -43,7 +37,9 @@ const Body = () => {
 
   if (onlineStatus === false)
     return (
-      <div className="h-lvh text-center ">Looks like you are Offline !!! check your internet connection</div>
+      <div className="h-lvh text-center ">
+        Looks like you are Offline !!! check your internet connection
+      </div>
     );
 
   const searchRest = (userInput, restList) => {
